@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bestie Valentine 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffd1e8, #ffeaf4);
+      font-family: "Segoe UI", Arial, sans-serif;
+      overflow: hidden;
+    }.card {
+  background: #ffffff;
+  padding: 32px 26px;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  animation: pop 0.6s ease;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  color: #ff4f8b;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 10px 0;
+  color: #333;
+}
+
+.hearts {
+  font-size: 24px;
+  margin: 10px 0 18px;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+button {
+  background: #ff4f8b;
+  color: #fff;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 79, 139, 0.4);
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey [ADOM] 💖</h1>
+    <div class="hearts">🫶💐✨</div>
+    <p>
+      Through laughs, secrets, chaos and love —<br>
+      life is honestly better with you in it 🥹💕
+    </p>
+    <p>
+      Will you be my Valentine this year?<br>
+      <strong>(Best-friend edition 🥰)</strong>
+    </p><button onclick="alert('YAY! BESTIE VALENTINE CONFIRMED 💖🥰🫶')">YES 💕</button>
+<button onclick="alert('Aww, maybe next time 😢💖')">NO 😢</button>
+
+<div class="footer">Best friends forever ♾️</div>
+
+  </div>  <script>
+    // Floating hearts animation
+    const hearts = ['💖','💘','💝','💞','🫶','✨'];
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+      heart.style.position = 'absolute';
+      heart.style.left = Math.random()*100+'%';
+      heart.style.fontSize = Math.random()*24+16+'px';
+      heart.style.top = '100%';
+      heart.style.opacity = Math.random();
+      heart.style.transition = 'top 4s linear, opacity 4s linear';
+      document.body.appendChild(heart);
+      setTimeout(() => { heart.style.top = '-10%'; heart.style.opacity = 0; }, 50);
+      setTimeout(() => { document.body.removeChild(heart); }, 4050);
+    }, 500);
+  </script></body>
+</html>
